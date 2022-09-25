@@ -1,0 +1,52 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+
+  font-family: 'Arvo', serif;
+}
+
+/* VARIABLES */
+:root {
+  /* --base-color: 330; */
+  /* --base-color: 337; */
+  /* --base-color: 344; */
+  /* --base-color: 342; */
+
+  --base-color: 342;
+  --base-color-text : 0;
+
+  --color-light:  hsla(var(--base-color), 50%, 75%, 100%);
+  --color-normal: hsla(var(--base-color), 50%, 50%, 100%);
+  --color-darker: hsla(var(--base-color), 50%, 35%, 100%);
+
+  --saturation-level1: 20%;
+  --saturation-level2: 50%;
+  --saturation-level3: 80%;
+  
+  --lightness-level1: 75%;
+  --lightness-level2: 50%;
+  --lightness-level3: 35%;
+  
+  --opacity-level1: 100%;
+  --opacity-level2: 80%;
+  --opacity-level3: 60%;
+  
+  --color-background:  hsla(240, 4%, 95%, 100%);
+  --color-text-100:  hsla(var(--base-color), 100%, 100%, 100%);
+  --color-text-80:  hsla(var(--base-color), 100%, 100%, 80%);
+  --color-text-50:  hsla(var(--base-color), 100%, 100%, 50%);
+
+  --weight-thin: 200;
+  --weight-medium: 400;
+  --weight-bold: 700;
+
+  --font-size-small: 12px;
+  --font-size-medium: 16px;
+  --font-size-large: 20px;
+}
