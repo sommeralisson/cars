@@ -1,4 +1,5 @@
 <?php
+  session_start();
   include './php/connection.php';
 
 ?>
@@ -9,10 +10,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Car Trading</title>
+  <title>Pokédex</title>
 
   <!-- Favicon / Css -->
-  <link rel="icon" type="image/x-icon" href="./img/web/icons8-chave-inglesa-color-glass-16.png">
+  <link rel="icon" type="image/x-icon" href="./img/web/Pokeball_icon-icons.com_67533.ico">
   <link rel="stylesheet" href="./css/style.css">
 
   <!-- Fonts -->
@@ -24,17 +25,17 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
 
   <!-- JS -->
-  <script src="./js/index.js"></script>
+  <script src="./js/util.js" defer></script>
 
 </head>
 <body class="container">
   <div class="container-principal">
     <div class="card-1">
-      <span class="card-1-title">Car Trading</span>
+      <span class="card-1-title">Pokédex</span>
     </div>
     <div class="card-2">
-      <form action="" method="POST">
-        <h2>Bem vindo ao Car Trading</h2>
+      <form action="./php/login/validation-login.php" method="POST">
+        <h2>Bem vindo!</h2>
         <p>
           Informe seus dados para se cadastrar ou faça login.
         </p>
@@ -66,18 +67,25 @@
             </label>
           </li>
           <li>
-            <label for="confirmpassword">Confirme a senha
-              <input type="password" id="confirmpassword" name="confirmpassword">
+            <label for="passwordconfirm">Confirme a senha
+              <input type="password" id="passwordconfirm" name="passwordconfirm">
             </label>
           </li>
           <li>
             <label for="submit">
-              <input type="submit" id="submit" name="submit" value="Enviar">
+              <button class="button-64" role="button"><span class="text">Enviar</span></button>
             </label>
           </li>
           <li class="login">
             <span>
               Já possui conta? <a href="#">Faça login!</a>
+            </span>
+            <br>
+            <span style='color: red;'>
+              <?php
+                echo isset($_SESSION['MSG']) ? $_SESSION['MSG'] : '';
+                unset($_SESSION['MSG']);
+              ?>
             </span>
           </li>
         </ul>
